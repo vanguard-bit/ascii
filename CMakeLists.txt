@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( a )
+find_package( OpenCV REQUIRED )
+find_package(OpenMP REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( a DisplayImage.cpp )
+target_link_libraries(a PUBLIC OpenMP::OpenMP_CXX ${OpenCV_LIBS} )
